@@ -21,9 +21,10 @@ yarn-error.log*
 
 # Build output directories
 build/
-dist/
 out/
 release/
+dist/
+**/dist/
 
 # Environment files
 .env
