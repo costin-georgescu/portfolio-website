@@ -1,0 +1,465 @@
+@use 'theme' as *;
+@use 'global' as *;
+@use 'mixins';
+
+$desktop-width: 1024px;
+$tablet-width: 768px;
+$mobile-width: 480px;
+
+// Header.
+
+header {
+  padding-top: 32px;
+  padding-bottom: 8px;
+
+  @media (max-width: $desktop-width) {
+    padding: 0px;
+  }
+
+  .navbar {
+    @include mixins.flex-row;
+    max-width: $desktop-width;
+    margin: 0 auto;
+
+    @media (max-width: $desktop-width) {
+      padding: 0px 16px;
+    }
+
+    .logo-wrapper {
+      @include mixins.flex-row;
+    }
+    
+    .logo-image {
+      height: 32px;
+      padding-right: 4px;
+    }
+    
+    .nav-list {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 32px;
+
+      & a:hover {
+        color: $celadon;
+        transition: color 0.5s ease;
+      }
+
+      @media (max-width: $mobile-width) {
+        display: none;
+      }
+    }
+
+    .burger-icon {
+      display: none;
+
+      @media (max-width: $mobile-width) {
+        display: block;
+        width: 32px;
+        height: 32px;
+        filter: invert(100%) sepia(6%) saturate(2113%) hue-rotate(67deg) brightness(100%) contrast(114%);
+      }
+    }
+  }
+}
+
+
+.home-page {
+  .nav-list a[href="index.html"] {
+  color: $celadon;
+  }
+}
+
+.projects-page {
+  .nav-list a[href="projects.html"] {
+    color: $celadon;
+  }
+}
+
+.about-page {
+  .nav-list a[href="about-me.html"] {
+    color: $celadon;
+  }
+}
+
+.contact-page {
+  .nav-list a[href="contact.html"] {
+    color: $celadon;
+  }
+}
+
+// Main container.
+
+.main-container {
+  max-width: $desktop-width;
+  @include mixins.flex-column($align-items: space-between, $gap: 112px);
+  margin: 0 auto;
+  
+  @media (max-width: $desktop-width) {
+    padding: 16px;
+  }
+}
+
+// Hero section
+
+.hero {
+  @include mixins.flex-row(space-evenly);
+  margin-top: 96px;
+
+  @media (max-width: $desktop-width) {
+    flex-direction: column-reverse;
+    text-align: center;
+    margin-top: 34px;
+  }
+
+  .hero-content {
+    color: $white;
+    @include mixins.flex-column;
+   
+    .hero-header {
+      margin-bottom: 4px;
+      font-size: 32px;
+    }
+
+    .hero-paragraph {
+      font-size: 18px;
+      margin-bottom: 24px;
+
+      .celadon-span {
+        color: $celadon;
+        font-family: "Verdana", sans-serif;
+        font-weight: 500;
+
+        &:hover {
+          color: $orange;
+          transition: color 0.5s ease;
+        }
+
+        @media (max-width: $desktop-width) {
+          color: $orange;
+        }
+      }
+    }
+  }
+
+  .laptop-image {
+    max-width: 400px;
+
+    @media (max-width: $mobile-width) {
+      padding: 0 24px;
+      width: 70%;
+    }
+    
+    @media (max-width: $desktop-width) {
+      padding: 0 24px;
+      width: 50%;
+    }
+  }
+}
+
+// Projects section.
+
+.projects {
+  @include mixins.flex-column(space-evenly, $gap: 48px);
+
+  @media (max-width: $desktop-width) {
+    @include mixins.flex-column($gap: 48px);
+    margin-top: -24px;
+  }
+
+  a:hover {
+    color: $orange;
+    transition: color 0.5s ease;
+  }
+
+  .projects-link {
+    @media (max-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  .projects-link-mobile {
+    text-align: center;
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  .project-cards {
+    display: flex;
+    justify-content: space-around;
+
+    @media (max-width: $mobile-width) {
+      @include mixins.flex-column($gap: 48px);
+    }
+
+    .project {
+      height: 250px;
+      width: 200px;
+      border: 1px solid $celadon;
+    }
+  }
+}
+
+// Styling the section header golobally as this block is reused 
+// & to avoid any issues.
+
+.section-header {
+  @include mixins.flex-row;
+
+  @media (max-width: $desktop-width) {
+    justify-content: center;
+  }
+
+  h2 {
+    position: relative;
+    font-weight: 500;
+    margin: 0;
+
+    &:after {
+      content: "";
+      background-color: $celadon;
+      width: calc(1040px - 100% - 32px);
+      height: 1px;
+      position: absolute;
+      right: -16px;
+      top: 50%;
+      transform: translate(100%, -50%);
+
+      @media (max-width: $desktop-width) {
+        display: none;
+      }
+    }
+
+    &#narrow-separator::after {
+      width: calc(1040px - 100% - 112px);
+
+      @media (max-width: $desktop-width) {
+        display: none;
+      }
+    }
+  }
+}
+
+// Projects page styling.
+
+.projects-page {
+  .main-container {
+    margin-top: 48px;
+    margin-bottom: 360px;
+  }
+
+  .projects {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .solo-header {
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .section-header {
+    h2 {
+      font-size: 24px;
+    }
+  }
+
+  .project-cards {
+    gap: 48px;
+  }
+}
+
+// Skills section
+
+.skills {
+  @include mixins.flex-column(space-between, $gap: 48px);
+
+  @media (max-width: $desktop-width) {
+    align-items: center;
+  }
+
+  .skills-content {
+    @include mixins.flex-row(
+    $justify-content: center, 
+    $align-items: flex-start, 
+    $gap: 48px
+    );
+
+    .skills-logo {
+      width: 244px;
+      flex-shrink: 0;
+      padding-left: 6vw;
+
+      @media (max-width: $mobile-width) {
+        display: none;
+      }
+    } 
+  }
+}
+
+/* Typing effect */
+.typed {
+  line-height: 35px;
+  font-size: 20px;
+  text-align: left;
+  font-family: "Source Code Pro", monospace;
+  color: $gray;
+  white-space: pre-line;
+  min-height: 300px;
+  width: 300px;
+  /* Fixed width for typed content */
+
+  &::after {
+    content: "|";
+    font-size: 20px;
+    animation: blink 0.75s step-end infinite;
+  }
+
+  @keyframes blink {
+
+    from,
+    to {
+      color: transparent;
+    }
+  
+    50% {
+      color: $white;
+    }
+  }
+}
+
+/* About section */
+
+.about {
+  @include mixins.flex-column(space-between, $gap: 48px);
+
+  @media (max-width: $desktop-width) {
+    align-items: center;
+  }
+
+  .about-content {
+    @include mixins.flex-row(space-evenly); 
+
+    @media (max-width: $mobile-width) {
+      @include mixins.flex-column;
+    }
+
+    .about-text {
+      max-width: 550px;
+
+      @media (max-width: $mobile-width) {
+        text-align: center;
+      }
+
+      p {
+        margin-bottom: 36px;
+      }
+    }
+
+    .profile-pic {
+      height: 250px;
+      border-radius: 25px;
+      box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+
+      @media (max-width: $mobile-width) {
+        display: none;
+      }
+    }
+  }
+}
+
+// About page styling.
+
+.about-page {
+  .main-container {
+    margin-top: 48px;
+    margin-bottom: 180px;
+  }
+}
+
+// Reach out section.
+
+.reach-out {
+  @media (max-width: $desktop-width) {
+    @include mixins.flex-column;
+  }
+
+  .reach-out-content {
+    @include mixins.flex-row($gap: 48px);
+    margin-top: 40px;
+
+    @media (max-width: $desktop-width) {
+      @include mixins.flex-column;
+      text-align: center;
+    }
+
+    p {
+      margin-top: 0px;
+    }
+
+    .contacts-card {
+      border: 1px solid $gray;
+      border-radius: 15px;
+      padding: 8px 16px;
+      display: flex;
+      justify-content: center;
+
+      h4 {
+        color: $gray;
+        font-weight: 600;
+        width: 144px;
+        text-align: center;
+      }
+    }
+
+    .contact {
+      color: $gray;
+      display: flex;
+      align-items: center;
+      padding-right: 8px;
+
+      img {
+        filter: invert(70%) sepia(99%) saturate(4%) hue-rotate(97deg) brightness(94%) contrast(88%);
+        width: 32px;
+        padding: 0 8px;
+
+        &:hover {
+          filter: invert(100%) sepia(6%) saturate(2113%) hue-rotate(67deg) brightness(100%) contrast(114%);
+          transition: color 0.5s ease;
+        }
+      }
+    }
+  }
+}
+
+// Contact page styling.
+
+.contact-page {
+  .main-container {
+    margin-top: 48px;
+    margin-bottom: 584px;
+  }
+}
+
+// Footer section.
+
+footer {
+  border-top: 1px solid $gray;
+  padding: 24px 0;
+  margin-top: 144px;
+
+  .footer-container {
+    max-width: $desktop-width;
+    margin: 0 auto;
+
+    .copyright {
+      color: $gray;
+      text-align: center;
+    }
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

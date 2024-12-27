@@ -1,0 +1,57 @@
+@use 'theme' as *;
+
+$desktop-width: 1024px;
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: $background;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $white;
+  }
+  
+  h2 {
+    font-size: 28px;
+
+    @media (max-width: $desktop-width) {
+        text-align: center;
+    }
+  }
+  
+  p {
+    color: $gray;
+  }
+  
+  ul {
+    color: $white;
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+  
+  .button {
+    font-size: 14px;
+    font-weight: 500;
+    background-color: $celadon;
+    border: 1px solid $celadon;
+    border-radius: 24px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+  }
+  
+  .button:hover {
+    background-color: $primary;
+    border: 1px solid $primary;
+  }
+  
