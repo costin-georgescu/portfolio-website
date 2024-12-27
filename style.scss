@@ -1,6 +1,6 @@
-@use 'theme' as *;
-@use 'global' as *;
-@use 'mixins';
+@use "theme" as *;
+@use "global" as *;
+@use "mixins";
 
 $desktop-width: 1024px;
 $tablet-width: 768px;
@@ -28,12 +28,12 @@ header {
     .logo-wrapper {
       @include mixins.flex-row;
     }
-    
+
     .logo-image {
       height: 32px;
       padding-right: 4px;
     }
-    
+
     .nav-list {
       margin: 0;
       padding: 0;
@@ -57,16 +57,16 @@ header {
         display: block;
         width: 32px;
         height: 32px;
-        filter: invert(100%) sepia(6%) saturate(2113%) hue-rotate(67deg) brightness(100%) contrast(114%);
+        filter: invert(100%) sepia(6%) saturate(2113%) hue-rotate(67deg)
+          brightness(100%) contrast(114%);
       }
     }
   }
 }
 
-
 .home-page {
   .nav-list a[href="index.html"] {
-  color: $celadon;
+    color: $celadon;
   }
 }
 
@@ -94,7 +94,7 @@ header {
   max-width: $desktop-width;
   @include mixins.flex-column($align-items: space-between, $gap: 112px);
   margin: 0 auto;
-  
+
   @media (max-width: $desktop-width) {
     padding: 16px;
   }
@@ -115,7 +115,7 @@ header {
   .hero-content {
     color: $white;
     @include mixins.flex-column;
-   
+
     .hero-header {
       margin-bottom: 4px;
       font-size: 32px;
@@ -149,7 +149,7 @@ header {
       padding: 0 24px;
       width: 70%;
     }
-    
+
     @media (max-width: $desktop-width) {
       padding: 0 24px;
       width: 50%;
@@ -202,7 +202,7 @@ header {
   }
 }
 
-// Styling the section header golobally as this block is reused 
+// Styling the section header golobally as this block is reused
 // & to avoid any issues.
 
 .section-header {
@@ -283,9 +283,9 @@ header {
 
   .skills-content {
     @include mixins.flex-row(
-    $justify-content: center, 
-    $align-items: flex-start, 
-    $gap: 48px
+      $justify-content: center,
+      $align-items: flex-start,
+      $gap: 48px
     );
 
     .skills-logo {
@@ -296,7 +296,7 @@ header {
       @media (max-width: $mobile-width) {
         display: none;
       }
-    } 
+    }
   }
 }
 
@@ -319,12 +319,11 @@ header {
   }
 
   @keyframes blink {
-
     from,
     to {
       color: transparent;
     }
-  
+
     50% {
       color: $white;
     }
@@ -341,7 +340,7 @@ header {
   }
 
   .about-content {
-    @include mixins.flex-row(space-evenly); 
+    @include mixins.flex-row(space-evenly);
 
     @media (max-width: $mobile-width) {
       @include mixins.flex-column;
@@ -422,12 +421,14 @@ header {
       padding-right: 8px;
 
       img {
-        filter: invert(70%) sepia(99%) saturate(4%) hue-rotate(97deg) brightness(94%) contrast(88%);
+        filter: invert(70%) sepia(99%) saturate(4%) hue-rotate(97deg)
+          brightness(94%) contrast(88%);
         width: 32px;
         padding: 0 8px;
 
         &:hover {
-          filter: invert(100%) sepia(6%) saturate(2113%) hue-rotate(67deg) brightness(100%) contrast(114%);
+          filter: invert(100%) sepia(6%) saturate(2113%) hue-rotate(67deg)
+            brightness(100%) contrast(114%);
           transition: color 0.5s ease;
         }
       }

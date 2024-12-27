@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random password generator</title>
+    <link rel="stylesheet" href="output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-custom bg-gradient-to-r from-slate-800 to-slate-900 flex flex-col items-center justify-center min-h-screen">
+    <h1 class="text-3xl font-extrabold text-center my-7 text-slate-300">Instantly Create Secure Passwords</h1>
+    <form class="bg-stone-100 p-8 rounded-2xl shadow-lg max-w-xl w-full mx-auto flex flex-col gap-4 transition-shadow duration-300 hover:shadow-2xl" role="search">
+        <output name="generatedPassword" class="flex justify-between items-center text-xl text-slate-200 my-4 border-2 border-slate-300 p-4 rounded-lg" aria-live="polite">
+            <samp class="text-slate-500 h-4 flex items-center"></samp>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-blue-500 hover:scale-110 transition-all duration-200 cursor-pointer">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75" />
+            </svg>
+        </output>
+        <label for="passwordLength" class="block text-sm font-medium text-slate-600 mb-2">
+            Password Length: <span id="lengthDisplay" class="font-bold">12</span> characters
+        </label>
+        <input 
+            type="range" 
+            id="passwordLength" 
+            name="passwordLength" 
+            min="4" 
+            max="32" 
+            value="12" 
+            class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer range-slider 
+            [&::-webkit-slider-thumb]:appearance-none 
+            [&::-webkit-slider-thumb]:h-4 
+            [&::-webkit-slider-thumb]:w-4 
+            [&::-webkit-slider-thumb]:bg-blue-500
+            [&::-webkit-slider-thumb]:rounded-full 
+            [&::-webkit-slider-thumb]:hover:scale-110 
+            [&::-webkit-slider-thumb]:transition-transform 
+            [&::-webkit-slider-thumb]:duration-200"
+        >
+        <div class="flex flex-col space-y-4 mt-4">
+            <div class="flex items-center space-x-2">
+                <input type="checkbox" name="includeUppercase" id="includeUppercase" class="form-checkbox text-slate-600 bg-slate-200 rounded focus:ring-slate-500 hover:scale-110 transition-transform duration-200 w-4 h-4" checked>
+                <label for="includeUppercase">Include uppercase letters</label>
+            </div>
+            <div class="flex items-center space-x-2">
+                <input type="checkbox" name="includeLowercase" id="includeLowercase" class="form-checkbox text-slate-600 bg-slate-200 rounded focus:ring-slate-500 hover:scale-110 transition-transform duration-200 w-4 h-4" checked>
+                <label for="includeLowercase">Include lowercase letters</label>
+            </div>
+            <div class="flex items-center space-x-2">
+                <input type="checkbox" name="includeNumbers" id="includeNumbers" class="form-checkbox text-slate-600 bg-slate-200 rounded focus:ring-slate-500 hover:scale-110 transition-transform duration-200 w-4 h-4" checked>
+                <label for="includeNumbers">Include numbers</label>
+            </div>
+            <div class="flex items-center space-x-2">
+                <input type="checkbox" name="includeSymbols" id="includeSymbols" class="form-checkbox text-slate-600 bg-slate-200 rounded focus:ring-slate-500 hover:scale-110 transition-transform duration-200 w-4 h-4" checked>
+                <label for="includeSymbols">Include symbols</label>
+            </div>
+        </div>
+        <button 
+            type="button" 
+            id="generateButton"
+            class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-600 transition-all duration-300 hover:scale-105 active:scale-95"
+        >
+            Generate Password
+        </button>
+        <script src="password-generator.js"></script>
+    </form>
+</body>
+</html>
