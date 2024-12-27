@@ -1,4 +1,5 @@
 # Dependency directories
+/weather/dist/*
 node_modules/
 !portfolio-website/weather-application/node_modules/bootstrap/dist/css/bootstrap.min.css
 !portfolio-website/weather-application/node_modules/bootstrap/dist/js/bootstrap.min.js
