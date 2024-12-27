@@ -44,3 +44,9 @@
   font-size: 1rem;
   text-align: center;
 }
+
+.search-container .col-form-label,
+.search-container input[type="text"] {
+  vertical-align: middle;
+  display: inline-block;
+}
