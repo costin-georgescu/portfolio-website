@@ -1,0 +1,51 @@
+.temperature-chart {
+  height: 200px;
+  width: 600px;
+}
+
+.forecast {
+  width: 600px;
+}
+
+.max-w-md {
+  max-width: 992px;
+}
+
+.weather-icon img {
+  width: 75px;
+  height: 75px;
+}
+
+.today {
+  background-color: rgba(215, 215, 215, 0.561);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+
+.forecast-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.forecast-day .day {
+  font-size: 1rem;
+}
+
+.forecast-day img {
+  width: 30px;
+  height: 30px;
+}
+
+.forecast-day .forecast-temperature {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.col-form-label span {
+    display: inline-block;
+    white-space: nowrap;
+}

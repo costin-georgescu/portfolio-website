@@ -1,12 +1,9 @@
 # Dependency directories
-/weather/dist/*
 node_modules/
-!portfolio-website/weather-application/node_modules/bootstrap/dist/css/bootstrap.min.css
-!portfolio-website/weather-application/node_modules/bootstrap/dist/js/bootstrap.min.js
-!portfolio-website/weather-application/node_modules/bootstrap/dist/css/bootstrap.min.css.map
-!portfolio-website/weather-application/node_modules/bootstrap/dist/js/bootstrap.min.js.map
-bower_components/
-jspm_packages/
+!weather/dist/
+!weather/dist/bootstrap.css
+!weather/dist/styles.css
+!weather/dist/bootstrap.js
 
 # Logs
 logs
