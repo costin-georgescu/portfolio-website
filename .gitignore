@@ -1,11 +1,11 @@
 # Dependency directories
 node_modules/
-bower_components/
-jspm_packages/
-
-# Exceptions for bootstrap CSS and JS
 !portfolio-website/weather-application/node_modules/bootstrap/dist/css/bootstrap.min.css
 !portfolio-website/weather-application/node_modules/bootstrap/dist/js/bootstrap.min.js
+!portfolio-website/weather-application/node_modules/bootstrap/dist/css/bootstrap.min.css.map
+!portfolio-website/weather-application/node_modules/bootstrap/dist/js/bootstrap.min.js.map
+bower_components/
+jspm_packages/
 
 # Logs
 logs
@@ -102,4 +102,3 @@ __pycache__/
 # Frontend build artifacts
 .webpack/
 .parcel-cache/
-
