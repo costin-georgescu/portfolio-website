@@ -3,6 +3,10 @@ node_modules/
 bower_components/
 jspm_packages/
 
+# Exceptions for bootstrap CSS and JS
+!portfolio-website/weather-application/node_modules/bootstrap/dist/css/bootstrap.min.css
+!portfolio-website/weather-application/node_modules/bootstrap/dist/js/bootstrap.min.js
+
 # Logs
 logs
 *.log
@@ -99,6 +103,3 @@ __pycache__/
 .webpack/
 .parcel-cache/
 
-# Exceptions for bootstrap CSS and JS
-!portfolio-website/weather-application/node_modules/bootstrap/dist/css/bootstrap.min.css
-!portfolio-website/weather-application/node_modules/bootstrap/dist/js/bootstrap.min.js
