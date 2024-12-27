@@ -44,16 +44,3 @@
   font-size: 1rem;
   text-align: center;
 }
-
-.no-break-space {
-    word-spacing: 0.25em;
-}
-
-.label-space {
-    display: inline-block;
-}
-
-.col-form-label span {
-    display: inline-block;
-    white-space: nowrap;
-}

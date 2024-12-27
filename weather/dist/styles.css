@@ -44,8 +44,3 @@
   font-size: 1rem;
   text-align: center;
 }
-
-.col-form-label span {
-    display: inline-block;
-    white-space: nowrap;
-}
