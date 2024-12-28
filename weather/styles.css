@@ -79,9 +79,3 @@
     font-size: 0.9rem;
   }
 }
-
-@media (max-width: 768px) {
-  .forecast-container {
-    max-width: 350px;
-  }
-}
