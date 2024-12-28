@@ -342,6 +342,7 @@ header .navbar .mobile-menu .mobile-nav-list .nav-item img {
 }
 .projects .project-cards .project .project-content .tech-stack {
   display: flex;
+  justify-content: center;
   gap: 8px;
   margin-bottom: 8px;
 }
@@ -362,24 +363,23 @@ header .navbar .mobile-menu .mobile-nav-list .nav-item img {
 .projects .project-cards .project .project-content .project-link:hover {
   color: rgb(85.172, 113.828, 89.948);
 }
-
-.password-generator .project-link {
+.projects .project-cards .project-link {
   text-decoration: none;
   color: inherit;
   display: block;
   cursor: pointer;
 }
-.password-generator .project-link .project {
+.projects .project-cards .project-link .project {
   transition: all 0.3s ease;
 }
-.password-generator .project-link .project:hover {
+.projects .project-cards .project-link .project:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
 }
-.password-generator .project-link .project:hover img {
+.projects .project-cards .project-link .project:hover img {
   filter: brightness(0) saturate(100%) invert(90%) sepia(19%) saturate(308%) hue-rotate(90deg) brightness(87%) contrast(90%);
 }
-.password-generator .project-link .project:hover .project-content h3 {
+.projects .project-cards .project-link .project:hover .project-content h3 {
   color: rgb(135.452, 165.548, 140.468);
 }
 
