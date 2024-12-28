@@ -1,25 +1,28 @@
 .temperature-chart {
   height: 200px;
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
 }
 
 .forecast {
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
 }
 
 .max-w-md {
   max-width: 992px;
+  width: 100%;
 }
 
 .weather-icon img {
-  width: 75px;
-  height: 75px;
+  width: 60px;
+  height: 60px;
 }
 
 .today {
   background-color: rgba(215, 215, 215, 0.561);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  padding: 1rem 2rem;
+  padding: 0.75rem 1rem;
   border-radius: 1rem;
 }
 
@@ -28,19 +31,51 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.8rem;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  min-width: 80px;
 }
 
 .forecast-day .day {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .forecast-day img {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 }
 
 .forecast-day .forecast-temperature {
-  font-size: 1rem;
+  font-size: 0.9rem;
   text-align: center;
+}
+
+.forecast-day .humidity {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+@media (min-width: 576px) {
+  .weather-icon img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .forecast-day {
+    gap: 0.8rem;
+    padding: 0.75rem;
+  }
+
+  .forecast-day .day {
+    font-size: 1rem;
+  }
+
+  .forecast-day img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .forecast-day .humidity {
+    font-size: 0.9rem;
+  }
 }
