@@ -42,4 +42,22 @@ document.addEventListener('DOMContentLoaded', function () {
   if (skillsSection) {
     observer.observe(skillsSection);
   }
+
+  // Mobile menu functionality
+  const burgerIcon = document.querySelector('.burger-icon');
+  const mobileMenu = document.querySelector('.mobile-menu');
+
+  burgerIcon.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+    document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+  });
+
+  // Close mobile menu when clicking a link
+  const mobileMenuLinks = document.querySelectorAll('.mobile-menu .nav-item a');
+  mobileMenuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  });
 });

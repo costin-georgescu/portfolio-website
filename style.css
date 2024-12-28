@@ -111,6 +111,7 @@ header .navbar .nav-list a:hover {
 }
 header .navbar .burger-icon {
   display: none;
+  margin-left: auto;
 }
 @media (max-width: 480px) {
   header .navbar .burger-icon {
@@ -118,7 +119,56 @@ header .navbar .burger-icon {
     width: 32px;
     height: 32px;
     filter: invert(100%) sepia(6%) saturate(2113%) hue-rotate(67deg) brightness(100%) contrast(114%);
+    cursor: pointer;
+    z-index: 1000;
   }
+}
+header .navbar .mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #272b2d;
+  z-index: 998;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+@media (max-width: 480px) {
+  header .navbar .mobile-menu {
+    display: block;
+    pointer-events: none;
+  }
+  header .navbar .mobile-menu.active {
+    transform: translateX(0);
+    pointer-events: all;
+  }
+}
+header .navbar .mobile-menu .mobile-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+header .navbar .mobile-menu .mobile-nav-list .nav-item a {
+  font-size: 24px;
+  color: #fdfffc;
+  text-decoration: none;
+}
+header .navbar .mobile-menu .mobile-nav-list .nav-item a:hover {
+  color: #aad2ba;
+  transition: color 0.3s ease;
 }
 
 .home-page .nav-list a[href="index.html"] {
