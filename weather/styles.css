@@ -7,6 +7,8 @@
 .forecast {
   width: 100%;
   max-width: 600px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .max-w-md {
@@ -77,5 +79,15 @@
 
   .forecast-day .humidity {
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .forecast {
+    justify-content: space-between;
+  }
+
+  .forecast-day {
+    flex-basis: 30%;
   }
 }

@@ -74,29 +74,33 @@
         </div>
       </div>
 
-      <div class="forecast-container d-flex flex-column gap-4">
+      <div
+        class="forecast-container d-flex flex-column justify-content-center gap-4"
+      >
         <div class="temperature-chart mb-4">
-          <h3 class="fs-3 fw-lighter text-secondary">24h forecast</h3>
+          <h3 class="fs-4 fw-lighter text-secondary text-center">
+            Temperature next 24hrs
+          </h3>
           <canvas id="temperatureChart"></canvas>
         </div>
 
-        <div class="forecast d-flex flex-wrap justify-content-between gap-2">
-          <div class="forecast-day today flex-grow-1">
+        <div class="forecast d-flex flex-wrap gap-2">
+          <div class="forecast-day today ">
             <div class="day">Today</div>
             <img src="icons/cloudy.svg" alt="Weather Icon" class="img-fluid" />
             <div class="humidity">Humidity<br />30%</div>
           </div>
-          <div class="forecast-day flex-grow-1">
+          <div class="forecast-day">
             <div class="day">Nov 24</div>
             <img src="icons/cloudy.svg" alt="Weather Icon" class="img-fluid" />
             <div class="humidity">Humidity<br />36%</div>
           </div>
-          <div class="forecast-day flex-grow-1">
+          <div class="forecast-day">
             <div class="day">Nov 25</div>
             <img src="icons/sunny.svg" alt="Weather Icon" class="img-fluid" />
             <div class="humidity">Humidity<br />20%</div>
           </div>
-          <div class="forecast-day flex-grow-1">
+          <div class="forecast-day">
             <div class="day">Nov 26</div>
             <img src="icons/sunny.svg" alt="Weather Icon" class="img-fluid" />
             <div class="humidity">Humidity<br />15%</div>
