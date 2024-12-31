@@ -326,13 +326,10 @@ header .navbar .mobile-menu .mobile-nav-list .nav-item img {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  gap: 8px;
+  gap: 4px;
 }
 .projects .project-cards .project .project-content img {
   width: 100%;
-  height: 100px;
-  object-fit: fit;
-  filter: brightness(0) saturate(100%) invert(51%) sepia(16%) saturate(570%) hue-rotate(78deg) brightness(99%) contrast(88%);
 }
 .projects .project-cards .project .project-content h3 {
   font-size: 1.2rem;
@@ -375,9 +372,6 @@ header .navbar .mobile-menu .mobile-nav-list .nav-item img {
 .projects .project-cards .project-link .project:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
-}
-.projects .project-cards .project-link .project:hover img {
-  filter: brightness(0) saturate(100%) invert(90%) sepia(19%) saturate(308%) hue-rotate(90deg) brightness(87%) contrast(90%);
 }
 .projects .project-cards .project-link .project:hover .project-content h3 {
   color: rgb(135.452, 165.548, 140.468);
