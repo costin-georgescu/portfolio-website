@@ -255,7 +255,6 @@ header {
     }
 
     .project {
-      height: 300px;
       width: 275px;
       border: 1px solid transparent;
       border-radius: 12px;
@@ -285,6 +284,7 @@ header {
         text-align: center;
         width: 100%;
         padding: 8px;
+        flex: 1 1 auto;
 
         img {
           width: 100%;
@@ -435,19 +435,70 @@ header {
   }
 
   .skills-content {
-    @include mixins.flex-row(
-      $justify-content: center,
-      $align-items: flex-start,
-      $gap: 48px
-    );
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
 
-    .skills-logo {
-      width: 244px;
-      flex-shrink: 0;
-      padding-left: 6vw;
+    @media (max-width: $desktop-width) {
+      flex-direction: column;
+      align-items: center;
+    }
 
-      @media (max-width: $mobile-width) {
-        display: none;
+    .skills-category {
+      flex: 1;
+      max-width: 350px;
+      background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.05)
+      );
+      border-radius: 16px;
+      padding: 32px;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(206, 234, 214, 0.1);
+      }
+
+      h3 {
+        color: $celadon;
+        margin-bottom: 24px;
+        font-size: 1.2rem;
+        text-align: center;
+        font-weight: 500;
+      }
+
+      .skills-items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 24px;
+        justify-items: center;
+      }
+
+      .skill-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        transition: transform 0.2s ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+
+        i {
+          font-size: 2.2rem;
+          color: $celadon;
+        }
+
+        span {
+          font-size: 0.9rem;
+          color: $gray;
+          text-align: center;
+        }
       }
     }
   }

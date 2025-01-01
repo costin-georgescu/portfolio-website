@@ -308,7 +308,6 @@ header .navbar .mobile-menu .mobile-nav-list .nav-item img {
   }
 }
 .projects .project-cards .project {
-  height: 300px;
   width: 275px;
   border: 1px solid transparent;
   border-radius: 12px;
@@ -331,6 +330,7 @@ header .navbar .mobile-menu .mobile-nav-list .nav-item img {
   text-align: center;
   width: 100%;
   padding: 8px;
+  flex: 1 1 auto;
 }
 .projects .project-cards .project .project-content img {
   width: 100%;
@@ -458,20 +458,61 @@ header .navbar .mobile-menu .mobile-nav-list .nav-item img {
   }
 }
 .skills .skills-content {
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 48px;
+  justify-content: space-between;
+  gap: 24px;
 }
-.skills .skills-content .skills-logo {
-  width: 244px;
-  flex-shrink: 0;
-  padding-left: 6vw;
-}
-@media (max-width: 480px) {
-  .skills .skills-content .skills-logo {
-    display: none;
+@media (max-width: 1024px) {
+  .skills .skills-content {
+    flex-direction: column;
+    align-items: center;
   }
+}
+.skills .skills-content .skills-category {
+  flex: 1;
+  max-width: 350px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  border-radius: 16px;
+  padding: 32px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skills .skills-content .skills-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(206, 234, 214, 0.1);
+}
+.skills .skills-content .skills-category h3 {
+  color: #aad2ba;
+  margin-bottom: 24px;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 500;
+}
+.skills .skills-content .skills-category .skills-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 24px;
+  justify-items: center;
+}
+.skills .skills-content .skills-category .skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: transform 0.2s ease;
+}
+.skills .skills-content .skills-category .skill-item:hover {
+  transform: scale(1.1);
+}
+.skills .skills-content .skills-category .skill-item i {
+  font-size: 2.2rem;
+  color: #aad2ba;
+}
+.skills .skills-content .skills-category .skill-item span {
+  font-size: 0.9rem;
+  color: #c0c2c1;
+  text-align: center;
 }
 
 /* Typing effect */
