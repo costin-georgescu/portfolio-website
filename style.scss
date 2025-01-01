@@ -568,13 +568,34 @@ header {
 
     .about-text {
       max-width: 550px;
+      width: 100%;
+      padding: 0 16px;
+      box-sizing: border-box;
 
       @media (max-width: $mobile-width) {
-        text-align: center;
+        text-align: left;
+        align-self: center;
+
+        .about-span {
+          display: block;
+          text-align: center;
+        }
       }
 
       p {
         margin-bottom: 36px;
+        line-height: 1.6;
+        hyphens: auto;
+        word-wrap: break-word;
+      }
+
+      .button {
+        align-self: flex-start;
+
+        @media (max-width: $mobile-width) {
+          width: 100%;
+          margin-top: 16px;
+        }
       }
     }
 
@@ -612,11 +633,25 @@ header {
 
     @media (max-width: $desktop-width) {
       @include mixins.flex-column;
-      text-align: center;
+      text-align: left;
     }
 
     p {
+      width: 100%;
+      padding: 0 16px;
       margin-top: 0px;
+      margin-bottom: 48px;
+      box-sizing: border-box;
+      line-height: 1.6;
+      hyphens: auto;
+      word-wrap: break-word;
+      align-self: center;
+
+      @media (max-width: $mobile-width) {
+        br {
+          display: none;
+        }
+      }
     }
 
     .contacts-card {

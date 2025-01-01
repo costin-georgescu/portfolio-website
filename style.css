@@ -587,14 +587,34 @@ header .navbar .mobile-menu .mobile-nav-list .nav-item img {
 }
 .about .about-content .about-text {
   max-width: 550px;
+  width: 100%;
+  padding: 0 16px;
+  box-sizing: border-box;
 }
 @media (max-width: 480px) {
   .about .about-content .about-text {
+    text-align: left;
+    align-self: center;
+  }
+  .about .about-content .about-text .about-span {
+    display: block;
     text-align: center;
   }
 }
 .about .about-content .about-text p {
   margin-bottom: 36px;
+  line-height: 1.6;
+  hyphens: auto;
+  word-wrap: break-word;
+}
+.about .about-content .about-text .button {
+  align-self: flex-start;
+}
+@media (max-width: 480px) {
+  .about .about-content .about-text .button {
+    width: 100%;
+    margin-top: 16px;
+  }
 }
 .about .about-content .profile-pic {
   height: 250px;
@@ -633,11 +653,24 @@ header .navbar .mobile-menu .mobile-nav-list .nav-item img {
     flex-direction: column;
     align-items: center;
     gap: 0;
-    text-align: center;
+    text-align: left;
   }
 }
 .reach-out .reach-out-content p {
+  width: 100%;
+  padding: 0 16px;
   margin-top: 0px;
+  margin-bottom: 48px;
+  box-sizing: border-box;
+  line-height: 1.6;
+  hyphens: auto;
+  word-wrap: break-word;
+  align-self: center;
+}
+@media (max-width: 480px) {
+  .reach-out .reach-out-content p br {
+    display: none;
+  }
 }
 .reach-out .reach-out-content .contacts-card {
   border: 1px solid #c0c2c1;
