@@ -257,62 +257,75 @@ header {
     .project {
       height: 300px;
       width: 275px;
-      border: 1px solid $celadon;
+      border: 1px solid transparent;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.05)
+      );
+      box-shadow: -10px -10px 30px rgba(255, 255, 255, 0.05),
+        10px 10px 30px rgba(0, 0, 0, 0.1);
+      transition: all 0.4s ease;
       display: flex;
+      backdrop-filter: blur(10px);
 
       &:hover {
         transform: translateY(-10px);
-        box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
+        box-shadow: -5px -5px 20px rgba(255, 255, 255, 0.05),
+          5px 5px 20px rgba(0, 0, 0, 0.05);
+        border-color: transparent;
       }
 
       .project-content {
-        padding: 16px;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        gap: 4px;
+        text-align: center;
+        width: 100%;
+        padding: 8px;
 
         img {
           width: 100%;
-          // filter: brightness(0) saturate(100%) invert(51%) sepia(16%)
-          //   saturate(570%) hue-rotate(78deg) brightness(99%) contrast(88%);
+          height: 200px;
+          object-fit: cover;
+          border-radius: 8px;
+          margin-bottom: 8px;
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: scale(1.05);
+          }
         }
 
         h3 {
           font-size: 1.2rem;
           color: $primary;
-          margin-bottom: 8px;
+          margin-bottom: 12px;
           text-align: center;
+          font-weight: 600;
+          letter-spacing: -0.5px;
         }
 
         .tech-stack {
-          display: flex;
           justify-content: center;
           gap: 8px;
           margin-bottom: 8px;
 
           .tech-tag {
-            background-color: $celadon;
-            color: $background;
+            background-color: rgba(206, 234, 214, 0.2);
+            color: $celadon;
             padding: 4px 8px;
-            border-radius: 4px;
+            border-radius: 6px;
             font-size: 0.7rem;
-          }
-        }
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
 
-        .project-link {
-          align-self: flex-start;
-          text-decoration: none;
-          color: $primary;
-          font-weight: bold;
-          transition: color 0.3s ease;
-
-          &:hover {
-            color: darken($primary, 10%);
+            &:hover {
+              background-color: rgba(206, 234, 214, 0.3);
+            }
           }
         }
       }
@@ -330,11 +343,6 @@ header {
         &:hover {
           transform: translateY(-10px);
           box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
-
-          // img {
-          //   filter: brightness(0) saturate(100%) invert(90%) sepia(19%)
-          //     saturate(308%) hue-rotate(90deg) brightness(87%) contrast(90%);
-          // }
 
           .project-content {
             h3 {
