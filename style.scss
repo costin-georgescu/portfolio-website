@@ -128,11 +128,23 @@ header {
   .nav-list a[href="index.html"] {
     color: $celadon;
   }
+
+  .mobile-menu {
+    .mobile-nav-list .nav-item a[href="index.html"] {
+      color: $celadon;
+    }
+  }
 }
 
 .projects-page {
   .nav-list a[href="projects.html"] {
     color: $celadon;
+  }
+
+  .mobile-menu {
+    .mobile-nav-list .nav-item a[href="projects.html"] {
+      color: $celadon;
+    }
   }
 }
 
@@ -140,11 +152,23 @@ header {
   .nav-list a[href="about-me.html"] {
     color: $celadon;
   }
+
+  .mobile-menu {
+    .mobile-nav-list .nav-item a[href="about-me.html"] {
+      color: $celadon;
+    }
+  }
 }
 
 .contact-page {
   .nav-list a[href="contact.html"] {
     color: $celadon;
+  }
+
+  .mobile-menu {
+    .mobile-nav-list .nav-item a[href="contact.html"] {
+      color: $celadon;
+    }
   }
 }
 

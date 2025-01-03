@@ -182,16 +182,28 @@ header .navbar .mobile-menu .mobile-nav-list .nav-item img {
 .home-page .nav-list a[href="index.html"] {
   color: #aad2ba;
 }
+.home-page .mobile-menu .mobile-nav-list .nav-item a[href="index.html"] {
+  color: #aad2ba;
+}
 
 .projects-page .nav-list a[href="projects.html"] {
+  color: #aad2ba;
+}
+.projects-page .mobile-menu .mobile-nav-list .nav-item a[href="projects.html"] {
   color: #aad2ba;
 }
 
 .about-page .nav-list a[href="about-me.html"] {
   color: #aad2ba;
 }
+.about-page .mobile-menu .mobile-nav-list .nav-item a[href="about-me.html"] {
+  color: #aad2ba;
+}
 
 .contact-page .nav-list a[href="contact.html"] {
+  color: #aad2ba;
+}
+.contact-page .mobile-menu .mobile-nav-list .nav-item a[href="contact.html"] {
   color: #aad2ba;
 }
 
