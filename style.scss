@@ -719,3 +719,9 @@ footer {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+@media (max-width: $mobile-width) {
+  .br-hidden {
+    display: none;
+  }
+}

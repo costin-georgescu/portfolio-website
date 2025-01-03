@@ -721,5 +721,10 @@ footer .footer-container .copyright {
 }
 
 
+@media (max-width: 480px) {
+  .br-hidden {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
