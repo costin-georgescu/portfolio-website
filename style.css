@@ -446,7 +446,6 @@ header .navbar .mobile-menu .mobile-nav-list .nav-item img {
 
 .projects-page .main-container {
   margin-top: 48px;
-  margin-bottom: 360px;
 }
 .projects-page .projects {
   display: flex;
@@ -660,7 +659,6 @@ header .navbar .mobile-menu .mobile-nav-list .nav-item img {
 
 .about-page .main-container {
   margin-top: 48px;
-  margin-bottom: 180px;
 }
 
 @media (max-width: 1024px) {
@@ -776,13 +774,16 @@ header .navbar .mobile-menu .mobile-nav-list .nav-item img {
 .contact-section .reach-out-text p {
   margin: 0;
   line-height: 1.6;
-  color: #fdfffc;
+  color: #c0c2c1;
+  text-align: center;
+  max-width: 100%;
+  padding: 0 16px;
 }
 .contact-section .contacts-card {
   border: 1px solid #c0c2c1;
   border-radius: 15px;
   padding: 16px;
-  width: fit-content;
+  width: 50%;
 }
 .contact-section .contacts-card h4 {
   color: #c0c2c1;
@@ -802,7 +803,7 @@ header .navbar .mobile-menu .mobile-nav-list .nav-item img {
   transition: filter 0.3s ease;
 }
 .contact-section .contacts-card .contact-links .contact-link img:hover {
-  filter: invert(88%) sepia(11%) saturate(933%) hue-rotate(113deg) brightness(93%) contrast(88%);
+  filter: brightness(0) saturate(100%) invert(100%) sepia(15%) saturate(1%) hue-rotate(83deg) brightness(100%) contrast(101%);
 }
 
 .contact-form-section {
@@ -903,7 +904,18 @@ header .navbar .mobile-menu .mobile-nav-list .nav-item img {
     margin: 0;
   }
 }
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.contact-page {
+  flex: 1 0 auto;
+}
+
 footer {
+  flex-shrink: 0;
   border-top: 1px solid #c0c2c1;
   padding: 16px 0;
   margin-top: 64px;
