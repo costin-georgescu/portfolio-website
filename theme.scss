@@ -1,5 +1,6 @@
 $primary: #6b8f71;
 $background: #272b2d;
+$background-light: #2f3638;
 $white: #fdfffc;
 $cerulean: #006e90;
 $celadon: #aad2ba;
@@ -9,6 +10,7 @@ $gray: #c0c2c1;
 :export {
   primary: $primary;
   background: $background;
+  background-light: $background-light;
   white: $white;
   cerulean: $cerulean;
   celadon: $celadon;

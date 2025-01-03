@@ -1,6 +1,7 @@
 :export {
   primary: #6b8f71;
   background: #272b2d;
+  background-light: #2f3638;
   white: #fdfffc;
   cerulean: #006e90;
   celadon: #aad2ba;
@@ -516,6 +517,13 @@ header .navbar .mobile-menu .mobile-nav-list .nav-item img {
   text-align: center;
   font-weight: 500;
 }
+.skills .skills-content .skills-category .skill-description {
+  margin-bottom: 36px;
+  margin-top: 0;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 400;
+}
 .skills .skills-content .skills-category .skills-items {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
@@ -534,7 +542,7 @@ header .navbar .mobile-menu .mobile-nav-list .nav-item img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   transition: transform 0.2s ease;
 }
 .skills .skills-content .skills-category .skill-item:hover {
@@ -545,7 +553,13 @@ header .navbar .mobile-menu .mobile-nav-list .nav-item img {
   color: #aad2ba;
 }
 .skills .skills-content .skills-category .skill-item span {
-  font-size: 0.9rem;
+  font-size: 1rem;
+  color: #aad2ba;
+  text-align: center;
+}
+.skills .skills-content .skills-category .skill-item p {
+  margin-top: 0;
+  font-size: 0.8rem;
   color: #c0c2c1;
   text-align: center;
 }
@@ -720,13 +734,179 @@ header .navbar .mobile-menu .mobile-nav-list .nav-item img {
 
 .contact-page .main-container {
   margin-top: 48px;
-  margin-bottom: 584px;
+  margin-bottom: 128px;
 }
 
+.contact-section {
+  width: 100%;
+  margin-top: -64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+.contact-section .contact-layout {
+  display: flex;
+  gap: 64px;
+}
+@media (max-width: 1024px) {
+  .contact-section .contact-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.contact-section .contact-layout .left-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+@media (max-width: 1024px) {
+  .contact-section .contact-layout .left-column {
+    margin-top: 0;
+  }
+  .contact-section .contact-layout .left-column p {
+    text-align: center;
+    max-width: 100%;
+    padding: 0 16px;
+  }
+}
+.contact-section .reach-out-text p {
+  margin: 0;
+  line-height: 1.6;
+  color: #fdfffc;
+}
+.contact-section .contacts-card {
+  border: 1px solid #c0c2c1;
+  border-radius: 15px;
+  padding: 16px;
+  width: fit-content;
+}
+.contact-section .contacts-card h4 {
+  color: #c0c2c1;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  text-align: center;
+}
+.contact-section .contacts-card .contact-links {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+.contact-section .contacts-card .contact-links .contact-link img {
+  width: 24px;
+  height: 24px;
+  filter: invert(70%) sepia(99%) saturate(4%) hue-rotate(97deg) brightness(94%) contrast(88%);
+  transition: filter 0.3s ease;
+}
+.contact-section .contacts-card .contact-links .contact-link img:hover {
+  filter: invert(88%) sepia(11%) saturate(933%) hue-rotate(113deg) brightness(93%) contrast(88%);
+}
+
+.contact-form-section {
+  flex: 1;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.contact-form-section h3 {
+  font-size: 1.5rem;
+  color: #aad2ba;
+  text-align: center;
+}
+.contact-form-section .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: #2f3638;
+  padding: 32px;
+  border-radius: 12px;
+  border: 1px solid rgba(170, 210, 186, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.contact-form-section .contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.contact-form-section .contact-form .form-group label {
+  color: #aad2ba;
+  font-size: 14px;
+  font-weight: 500;
+}
+.contact-form-section .contact-form .form-group input,
+.contact-form-section .contact-form .form-group textarea {
+  background-color: #272b2d;
+  border: 1px solid #c0c2c1;
+  border-radius: 8px;
+  padding: 12px;
+  color: #fdfffc;
+  transition: all 0.3s ease;
+}
+.contact-form-section .contact-form .form-group input:focus,
+.contact-form-section .contact-form .form-group textarea:focus {
+  outline: none;
+  border-color: #aad2ba;
+  box-shadow: 0 0 0 2px rgba(170, 210, 186, 0.1);
+}
+.contact-form-section .contact-form .form-group input::placeholder,
+.contact-form-section .contact-form .form-group textarea::placeholder {
+  color: rgba(192, 194, 193, 0.7);
+}
+.contact-form-section .contact-form .form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.contact-form-section .contact-form .submit-group {
+  margin-top: 8px;
+}
+.contact-form-section .contact-form .submit-group .submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #aad2ba;
+  color: #272b2d;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.contact-form-section .contact-form .submit-group .submit-btn:hover {
+  background-color: rgb(153.3269230769, 201.1730769231, 172.4653846154);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.contact-form-section .contact-form .submit-group .submit-btn:active {
+  transform: translateY(0);
+}
+.contact-form-section .contact-form input:-webkit-autofill, .contact-form-section .contact-form input:-webkit-autofill:hover, .contact-form-section .contact-form input:-webkit-autofill:focus, .contact-form-section .contact-form input:-webkit-autofill:active,
+.contact-form-section .contact-form textarea:-webkit-autofill,
+.contact-form-section .contact-form textarea:-webkit-autofill:hover,
+.contact-form-section .contact-form textarea:-webkit-autofill:focus,
+.contact-form-section .contact-form textarea:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #272b2d inset !important;
+  -webkit-text-fill-color: #c0c2c1 !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+@media (max-width: 480px) {
+  .contact-form-section {
+    padding: 0;
+  }
+  .contact-form-section .contact-form {
+    padding: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+  }
+}
 footer {
   border-top: 1px solid #c0c2c1;
   padding: 16px 0;
-  margin-top: 144px;
+  margin-top: 64px;
 }
 footer .footer-container {
   max-width: 1024px;
