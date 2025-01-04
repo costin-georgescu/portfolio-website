@@ -10,13 +10,13 @@ Express.js`;
 
 function type() {
   let textChar = text.charAt(textLength++);
-  let paragraph = document.getElementById('typed');
+  let paragraph = document.getElementById("typed");
   let charElement = document.createTextNode(textChar);
   paragraph.appendChild(charElement);
   if (textLength < text.length + 1) {
-    setTimeout('type()', 50);
+    setTimeout("type()", 50);
   } else {
-    text = '';
+    text = "";
   }
 }
 
@@ -36,28 +36,30 @@ const observer = new IntersectionObserver(
   }
 );
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   // Start observing the skills section
-  const skillsSection = document.querySelector('.skills-content');
+  const skillsSection = document.querySelector(".skills-content");
   if (skillsSection) {
     observer.observe(skillsSection);
   }
 
   // Mobile menu functionality
-  const burgerIcon = document.querySelector('.burger-icon');
-  const mobileMenu = document.querySelector('.mobile-menu');
+  const burgerIcon = document.querySelector(".burger-icon");
+  const mobileMenu = document.querySelector(".mobile-menu");
 
-  burgerIcon.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-    document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+  burgerIcon.addEventListener("click", () => {
+    mobileMenu.classList.toggle("active");
+    document.body.style.overflow = mobileMenu.classList.contains("active")
+      ? "hidden"
+      : "";
   });
 
   // Close mobile menu when clicking a link
-  const mobileMenuLinks = document.querySelectorAll('.mobile-menu .nav-item a');
-  mobileMenuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
-      document.body.style.overflow = '';
+  const mobileMenuLinks = document.querySelectorAll(".mobile-menu .nav-item a");
+  mobileMenuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("active");
+      document.body.style.overflow = "";
     });
   });
 });

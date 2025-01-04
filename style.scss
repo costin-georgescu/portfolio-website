@@ -65,7 +65,8 @@ header {
     }
 
     .mobile-menu.active ~ .burger-icon {
-      filter: invert(89%) sepia(11%) saturate(503%) hue-rotate(84deg) brightness(93%) contrast(92%);
+      filter: invert(89%) sepia(11%) saturate(503%) hue-rotate(84deg)
+        brightness(93%) contrast(92%);
     }
 
     .mobile-menu {
@@ -616,6 +617,12 @@ header {
       @media (max-width: $mobile-width) {
         text-align: left;
         align-self: center;
+        margin: 0;
+        line-height: 1.6;
+        color: $gray;
+        text-align: center;
+        max-width: 100%;
+        padding: 0 16px;
 
         .about-span {
           display: block;
@@ -631,15 +638,14 @@ header {
       }
 
       a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        max-width: 200px;
-
         @media (max-width: $mobile-width) {
           width: 100%;
           margin-top: 16px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto;
+          max-width: 200px;
         }
       }
     }
@@ -692,6 +698,13 @@ header {
       align-self: center;
 
       @media (max-width: $mobile-width) {
+        margin: 0;
+        line-height: 1.6;
+        color: $gray;
+        text-align: center;
+        max-width: 100%;
+        padding: 16px;
+
         br {
           display: none;
         }
