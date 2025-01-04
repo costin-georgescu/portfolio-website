@@ -278,7 +278,7 @@ header {
     display: flex;
     justify-content: space-around;
 
-    @media (max-width: $mobile-width) {
+    @media (max-width: $desktop-width) {
       @include mixins.flex-column($gap: 48px);
     }
 
@@ -490,7 +490,7 @@ header {
         box-shadow: 0 8px 20px rgba(206, 234, 214, 0.1);
       }
 
-      @media (max-width: $mobile-width) {
+      @media (max-width: $desktop-width) {
         display: flex;
         flex-direction: column;
         max-width: 350px;
@@ -614,7 +614,7 @@ header {
       padding: 0 16px;
       box-sizing: border-box;
 
-      @media (max-width: $mobile-width) {
+      @media (max-width: $desktop-width) {
         text-align: left;
         align-self: center;
         margin: 0;
@@ -623,6 +623,7 @@ header {
         text-align: center;
         max-width: 100%;
         padding: 0 16px;
+        max-width: 550px;
 
         .about-span {
           display: block;
@@ -638,7 +639,7 @@ header {
       }
 
       a {
-        @media (max-width: $mobile-width) {
+        @media (max-width: $desktop-width) {
           width: 100%;
           margin-top: 16px;
           display: flex;
@@ -655,7 +656,7 @@ header {
       border-radius: 25px;
       box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 
-      @media (max-width: $mobile-width) {
+      @media (max-width: $desktop-width) {
         display: none;
       }
     }
@@ -697,12 +698,12 @@ header {
       word-wrap: break-word;
       align-self: center;
 
-      @media (max-width: $mobile-width) {
+      @media (max-width: $desktop-width) {
         margin: 0;
         line-height: 1.6;
         color: $gray;
         text-align: center;
-        max-width: 100%;
+        max-width: 550px;
         padding: 16px;
 
         br {

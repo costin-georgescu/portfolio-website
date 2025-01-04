@@ -320,7 +320,7 @@ header .navbar .mobile-menu .mobile-nav-list .nav-item img {
   display: flex;
   justify-content: space-around;
 }
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
   .projects .project-cards {
     display: flex;
     flex-direction: column;
@@ -502,7 +502,7 @@ header .navbar .mobile-menu .mobile-nav-list .nav-item img {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(206, 234, 214, 0.1);
 }
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
   .skills .skills-content .skills-category {
     display: flex;
     flex-direction: column;
@@ -624,7 +624,7 @@ header .navbar .mobile-menu .mobile-nav-list .nav-item img {
   padding: 0 16px;
   box-sizing: border-box;
 }
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
   .about .about-content .about-text {
     text-align: left;
     align-self: center;
@@ -634,6 +634,7 @@ header .navbar .mobile-menu .mobile-nav-list .nav-item img {
     text-align: center;
     max-width: 100%;
     padding: 0 16px;
+    max-width: 550px;
   }
   .about .about-content .about-text .about-span {
     display: block;
@@ -646,7 +647,7 @@ header .navbar .mobile-menu .mobile-nav-list .nav-item img {
   hyphens: auto;
   word-wrap: break-word;
 }
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
   .about .about-content .about-text a {
     width: 100%;
     margin-top: 16px;
@@ -662,7 +663,7 @@ header .navbar .mobile-menu .mobile-nav-list .nav-item img {
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
   .about .about-content .profile-pic {
     display: none;
   }
@@ -707,13 +708,13 @@ header .navbar .mobile-menu .mobile-nav-list .nav-item img {
   word-wrap: break-word;
   align-self: center;
 }
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
   .reach-out .reach-out-content p {
     margin: 0;
     line-height: 1.6;
     color: #c0c2c1;
     text-align: center;
-    max-width: 100%;
+    max-width: 550px;
     padding: 16px;
   }
   .reach-out .reach-out-content p br {
