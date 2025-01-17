@@ -361,9 +361,6 @@ header .navbar .mobile-menu .mobile-nav-list .nav-item img {
   margin-bottom: 8px;
   transition: transform 0.3s ease;
 }
-.projects .project-cards .project .project-content img:hover {
-  transform: scale(1.05);
-}
 .projects .project-cards .project .project-content h3 {
   font-size: 1.2rem;
   color: #6b8f71;
@@ -954,6 +951,39 @@ footer .footer-container .copyright {
   .br-hidden {
     display: none;
   }
+}
+.thank-you-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.thank-you-page main {
+  flex: 1 0 auto;
+}
+.thank-you-page footer {
+  flex-shrink: 0;
+}
+
+.thank-you-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+.thank-you-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+.thank-you-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #c0c2c1;
+}
+.thank-you-section .button {
+  margin-top: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
