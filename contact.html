@@ -105,6 +105,7 @@
                   action="https://formspree.io/f/mdkkpejy"
                   method="POST"
                   class="contact-form"
+                  onsubmit="submitForm(event)"
                 >
                   <div class="form-group">
                     <label for="full-name">Full Name</label>
@@ -141,16 +142,7 @@
                     name="_subject"
                     value="New submission from portfolio contact form"
                   />
-                  <input
-                    type="hidden"
-                    name="_template"
-                    value="table"
-                  />
-                  <input
-                    type="hidden"
-                    name="_next"
-                    value="/thank-you.html"
-                  />
+                  <input type="hidden" name="_template" value="table" />
                   <div class="form-group submit-group">
                     <button type="submit" class="submit-btn">
                       Send Message
@@ -173,6 +165,25 @@
         <div class="copyright">&copy; Copyright 2025 Costin Georgescu</div>
       </div>
     </footer>
-    <script src="script.js"></script>
+    <script>
+      function submitForm(event) {
+        event.preventDefault();
+        const form = event.target;
+        const formData = new FormData(form);
+        fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            window.location.href = "https://costingeorgescu.com/thank-you.html";
+          })
+          .catch((error) => console.error(error));
+      }
+    </script>
   </body>
 </html>
