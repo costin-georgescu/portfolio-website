@@ -16,14 +16,16 @@
   <body class="contact-page">
     <header>
       <nav class="navbar">
-        <div class="logo-wrapper">
-          <img
-            src="./assets/cg-logo-darkgrey-celadon.jpg"
-            class="logo-image"
-            alt="Website Logo"
-          />
-          <h1>Costin</h1>
-        </div>
+        <a href="https://costingeorgescu.com/index.html">
+          <div class="logo-wrapper">
+            <img
+              src="./assets/cg-logo-darkgrey-celadon.jpg"
+              class="logo-image"
+              alt="Website Logo"
+            />
+            <h1>Costin</h1>
+          </div>
+        </a>
         <ul class="nav-list">
           <li class="nav-item">
             <a href="index.html">Home</a>
@@ -174,13 +176,13 @@
           method: form.method,
           body: formData,
           headers: {
-            Accept: "application/json",
+            Accept: 'application/json',
           },
         })
           .then((response) => response.json())
           .then((data) => {
             console.log(data);
-            window.location.href = "https://costingeorgescu.com/thank-you.html";
+            window.location.href = 'https://costingeorgescu.com/thank-you.html';
           })
           .catch((error) => console.error(error));
       }
